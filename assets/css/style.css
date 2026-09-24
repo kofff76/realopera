@@ -22,3 +22,157 @@ body.motion-ready{cursor:none}.scroll-progress{position:fixed;z-index:9999;left:
 .video-modal{backdrop-filter:blur(14px)}.video-modal-inner{box-shadow:0 35px 100px rgba(0,0,0,.55);background:#000}.video-modal-inner video{object-fit:contain;background:#000}.topbar{transition:background .4s,backdrop-filter .4s}.topbar:hover{background:rgba(5,5,5,.32);backdrop-filter:blur(12px)}.brand,.topnav a{position:relative}.topnav a:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:#d9bf94;transform:scaleX(0);transform-origin:right;transition:transform .35s ease}.topnav a:hover:after{transform:scaleX(1);transform-origin:left}.marquee{position:relative}.marquee:after{content:"";position:absolute;inset:0;box-shadow:inset 8vw 0 6vw -5vw #181512,inset -8vw 0 6vw -5vw #181512;pointer-events:none}
 @media(max-width:980px){body.motion-ready{cursor:auto}.lux-cursor,.ambient-glow{display:none}.artist:after{display:none}.section-sweep{left:22px;right:22px}.artist-copy:before{left:24px}.hero:after{opacity:.2}.experience:after{width:90px;height:90px;right:-20px}}
 @media(prefers-reduced-motion:reduce){.lux-cursor,.ambient-glow,.scroll-progress{display:none!important}}
+
+/* =========================================================
+   2026 FASHION LIGHT EDITION
+   Palette: deep navy + luminous ivory
+   ========================================================= */
+:root{
+  --ink:#0b2a4a;
+  --navy:#0b2a4a;
+  --navy-2:#123b66;
+  --ivory:#fbfaf6;
+  --paper:#ffffff;
+  --light:#f4f7fb;
+  --gold:#0b2a4a;
+  --wine:#0b2a4a;
+  --line:rgba(11,42,74,.16);
+}
+html{background:var(--ivory)}
+body{background:var(--ivory);color:var(--navy)}
+::selection{background:var(--navy);color:#fff}
+.section-index{color:rgba(11,42,74,.55)}
+.section-index.light{color:rgba(255,255,255,.6)}
+
+/* brighter preloader */
+.preloader{background:var(--ivory);color:var(--navy)}
+.preloader-line{background:linear-gradient(90deg,transparent,var(--navy),transparent)}
+.preloader-sub{color:rgba(11,42,74,.5)}
+
+/* editorial navigation */
+.topbar{color:var(--navy);background:linear-gradient(to bottom,rgba(251,250,246,.98),rgba(251,250,246,.82),transparent);backdrop-filter:blur(2px)}
+.brand i{color:rgba(11,42,74,.55)}
+.burger span{background:var(--navy)}
+.menu{background:rgba(11,42,74,.985);color:#fff}
+.menu-inner>p{color:rgba(255,255,255,.68)}
+
+/* HERO — fashion magazine composition */
+.hero{height:100svh;min-height:760px;background:var(--ivory);color:var(--navy);overflow:hidden}
+.hero:before{content:"";position:absolute;left:5.5vw;top:16vh;width:1px;height:64vh;background:rgba(11,42,74,.16);z-index:3}
+.hero:after{content:"01";position:absolute;left:6.2vw;bottom:7vh;font-family:"Bodoni Moda",serif;font-size:12px;letter-spacing:.24em;color:rgba(11,42,74,.45);z-index:6}
+.hero-photo{top:11vh;bottom:5vh;width:25vw;min-width:310px;box-shadow:0 32px 90px rgba(11,42,74,.13)}
+.hero-photo img{filter:saturate(.96) contrast(1.02);transition:filter .6s ease}
+.hero-photo--maxim{left:auto;right:27.5vw;z-index:1}
+.hero-photo--khachatur{right:2.8vw;z-index:2;top:17vh;bottom:9vh}
+.hero-photo--maxim img{object-position:50% 30%}
+.hero-photo--khachatur img{object-position:50% 35%}
+.hero-shade{background:linear-gradient(90deg,rgba(251,250,246,1) 0%,rgba(251,250,246,.96) 40%,rgba(251,250,246,.08) 60%,rgba(11,42,74,.04) 100%)}
+.hero-content{align-items:flex-start;text-align:left;justify-content:center;width:48vw;padding:120px 4vw 80px 8vw}
+.eyebrow{color:rgba(11,42,74,.64);margin-bottom:26px}
+.hero h1{font-size:clamp(76px,10.3vw,176px);line-height:.7;max-width:740px;letter-spacing:-.065em}
+.hero h1 em{color:var(--navy);margin-left:8vw;font-style:italic;font-weight:400}
+.hero-lead{max-width:560px;font-size:clamp(21px,2vw,31px);color:rgba(11,42,74,.82);margin:38px 0 27px}
+.hero-names{gap:16px;flex-direction:column;color:rgba(11,42,74,.63)}
+.hero-scroll{color:rgba(11,42,74,.58)}
+
+.marquee{background:var(--navy);color:#fff;border:0;height:52px}
+.marquee div{opacity:.82}
+
+/* CONCEPT — airy, commercial, optimistic */
+.concept{background:#fff;position:relative}
+.concept:after{content:"OPERA / PRIVÉ";position:absolute;right:-1vw;top:5vh;font-family:"Bodoni Moda",serif;font-size:clamp(70px,10vw,180px);letter-spacing:-.06em;color:rgba(11,42,74,.035);white-space:nowrap;pointer-events:none}
+.concept-copy .script{color:var(--navy)}
+.concept-copy h2{color:var(--navy)}
+.concept-copy>p:last-child{color:rgba(11,42,74,.78)}
+.concept-note{color:rgba(11,42,74,.7);border-left-color:rgba(11,42,74,.18)}
+.concept-note span{padding:10px 0;border-bottom:1px solid rgba(11,42,74,.08)}
+
+/* ARTISTS — alternating fashion pages instead of black panels */
+.artists{background:var(--light);color:var(--navy)}
+.artist{position:relative;background:var(--light);min-height:100vh}
+.artist:nth-child(2){background:#fff}
+.artist:before{content:"";position:absolute;z-index:5;left:50%;top:10vh;bottom:10vh;width:1px;background:rgba(11,42,74,.1);pointer-events:none}
+.artist-image{height:100vh;background:#dfe8f2;padding:4.2vw;overflow:hidden}
+.artist-image img{height:100%;object-fit:cover;filter:saturate(.98) contrast(1.01);box-shadow:0 25px 70px rgba(11,42,74,.1)}
+.artist--khachatur .artist-image img{object-position:center 35%}
+.artist-copy{position:relative}
+.artist-copy:after{content:"MAESTRO";position:absolute;right:3vw;bottom:3.5vh;font-family:"Bodoni Moda",serif;font-size:11px;letter-spacing:.36em;color:rgba(11,42,74,.32)}
+.artist-role{color:rgba(11,42,74,.58)}
+.artist-copy h2{color:var(--navy)}
+.artist-copy h2 em{color:var(--navy)}
+.artist-copy>p:not(.artist-role){color:rgba(11,42,74,.76)}
+.credits{border-top-color:rgba(11,42,74,.16);color:rgba(11,42,74,.47)}
+
+/* PROGRAM — rich navy statement section */
+.program{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.program:before{content:"60";position:absolute;right:-2vw;top:-5vh;font-family:"Bodoni Moda",serif;font-size:min(38vw,560px);line-height:1;color:rgba(255,255,255,.025);pointer-events:none}
+.program-head .script,.program-head h2 em,.program-number{color:#fff}
+.program-main p{color:rgba(255,255,255,.78)}
+.program-tags span{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.24)}
+.program-details small{color:rgba(255,255,255,.58)}
+
+/* EXPERIENCE — bright editorial page */
+.experience{background:var(--ivory)}
+.experience-photo{height:100vh;padding:4vw;background:#eef3f8}
+.experience-photo img{height:100%;object-fit:cover;object-position:center 34%;box-shadow:0 24px 70px rgba(11,42,74,.1)}
+.experience-copy .script{color:var(--navy)}
+.experience-copy h2{color:var(--navy)}
+.experience-copy>p:last-child{color:rgba(11,42,74,.76)}
+
+/* VIDEO — gallery/fashion campaign */
+.video{background:#fff}
+.video-head .script,.video-head h2{color:var(--navy)}
+.video-grid{gap:2vw;perspective:1400px}
+.video-card{height:min(64vw,680px);background:#dfe8f2;color:#fff;box-shadow:0 25px 75px rgba(11,42,74,.12)}
+.video-card:before{content:"";position:absolute;z-index:3;inset:14px;border:1px solid rgba(255,255,255,.48);pointer-events:none;transition:inset .45s ease}
+.video-card:hover:before{inset:22px}
+.video-card img{filter:brightness(.82) saturate(.95)}
+.video-card:hover img{filter:brightness(.9) saturate(1)}
+.video-card:after{background:linear-gradient(to top,rgba(11,42,74,.82),rgba(11,42,74,.02) 62%)}
+.video-card .play{background:rgba(255,255,255,.08);backdrop-filter:blur(8px)}
+.video-card small{color:rgba(255,255,255,.72)}
+.video-note{color:rgba(11,42,74,.5)}
+
+/* BOOKING — blue, not black */
+.booking{background:var(--navy);color:#fff}
+.booking-bg{color:rgba(255,255,255,.035)}
+.booking-content .script{color:#fff}
+.booking-btn{background:#fff!important;color:var(--navy)!important;border-color:#fff!important;box-shadow:0 16px 50px rgba(0,0,0,.08)!important}
+.booking-btn:hover{background:transparent!important;color:#fff!important}
+.booking-meta{color:rgba(255,255,255,.58)}
+footer{background:var(--navy);color:rgba(255,255,255,.55);border-top:1px solid rgba(255,255,255,.1)}
+
+/* micro fashion details */
+.motion-word{display:inline-block;will-change:transform,opacity}
+.section-sweep{background:linear-gradient(90deg,transparent,rgba(11,42,74,.25),transparent)!important}
+.program .section-sweep,.booking .section-sweep,.marquee .section-sweep{background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent)!important}
+.cursor{border-color:var(--navy)!important}
+.cursor.is-active{background:rgba(11,42,74,.08)!important}
+.pointer-glow{background:radial-gradient(circle,rgba(62,129,201,.10),transparent 68%)!important}
+.scroll-progress{background:var(--navy)!important}
+
+@media(max-width:980px){
+  .topbar{height:70px;padding:0 18px}.topnav a{display:none}.burger{display:block}
+  .hero{min-height:760px;height:auto;padding-bottom:40px}
+  .hero-photo{top:39vh;bottom:auto;height:54vh;width:46vw;min-width:0}
+  .hero-photo--maxim{left:2vw;right:auto}
+  .hero-photo--khachatur{right:2vw;top:43vh}
+  .hero-shade{background:linear-gradient(180deg,var(--ivory) 0%,var(--ivory) 37%,rgba(251,250,246,.08) 63%,rgba(11,42,74,.08) 100%)}
+  .hero-content{position:relative;width:100%;height:40vh;min-height:390px;padding:105px 22px 30px;align-items:flex-start}
+  .hero h1{font-size:clamp(64px,17vw,118px)}.hero h1 em{margin-left:14vw}
+  .hero-lead{font-size:20px;margin:22px 0 12px}.hero-names{display:none}.hero-scroll{display:none}
+  .concept{grid-template-columns:1fr;padding:80px 22px}.concept .section-index{margin-bottom:70px}.concept-note{margin-top:50px}
+  .artist{grid-template-columns:1fr}.artist:before{display:none}.artist-image{height:70vh;padding:18px}.artist-copy{padding:70px 24px 90px}.artist--khachatur .artist-copy{order:2}.artist--khachatur .artist-image{order:1}
+  .program{padding:80px 24px}.program-grid{grid-template-columns:1fr;gap:50px}
+  .experience{grid-template-columns:1fr}.experience-photo{height:70vh;padding:18px}.experience-copy{padding:80px 24px}
+  .video{padding:80px 20px}.video-grid{grid-template-columns:1fr}.video-card{height:78vh;max-height:720px}
+}
+
+@media(max-width:620px){
+  .hero{min-height:740px}.hero-content{min-height:370px}.hero-photo{height:47vh;top:42vh}.hero-photo--khachatur{top:45vh}
+  .hero h1{font-size:clamp(58px,18vw,92px)}
+  .hero-lead{max-width:92%;font-size:18px}
+  .eyebrow{font-size:7px;letter-spacing:.25em}
+  .artist-image,.experience-photo{height:58vh}
+  .video-card{height:66vh}.video-card strong{font-size:25px}
+}
